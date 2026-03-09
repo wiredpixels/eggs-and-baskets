@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://lsbe6jiooec1"]
+
+[ext_resource type="PackedScene" uid="uid://bh38e6rqi4yfw" path="res://UI/GameOverPanel/game_over_panel.tscn" id="1_1nvy6"]
+[ext_resource type="Script" uid="uid://b7h3e30tfrcki" path="res://UI/MainUI/main_ui.gd" id="1_ky12q"]
+[ext_resource type="PackedScene" uid="uid://cww7qsirwrmoq" path="res://UI/MainPanel/main_panel.tscn" id="2_1yvig"]
+[ext_resource type="PackedScene" uid="uid://bkug7wnk3hiov" path="res://UI/LevelPassed/level_passed.tscn" id="4_g3lw5"]
+[ext_resource type="PackedScene" uid="uid://uw6gvdxe8fa3" path="res://UI/Congratulations/congratulations.tscn" id="5_4yaab"]
+
+[node name="MainUi" type="CanvasLayer" unique_id=1967254162]
+process_mode = 3
+script = ExtResource("1_ky12q")
+
+[node name="LabelLevel" type="Label" parent="." unique_id=1658055193]
+offset_right = 40.0
+offset_bottom = 45.0
+
+[node name="MainPanel" parent="." unique_id=409733759 instance=ExtResource("2_1yvig")]
+
+[node name="GameOverPanel" parent="." unique_id=948706302 instance=ExtResource("1_1nvy6")]
+offset_top = -83.0
+
+[node name="LevelPassed" parent="." unique_id=2147375089 instance=ExtResource("4_g3lw5")]
+
+[node name="LabelHint" type="Label" parent="." unique_id=187936951]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.0
+offset_top = 91.0
+offset_right = 368.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select the conveyor belts and place them 
+to complete the path to the nest.
+Blow the whistle to pause/unpause."
+horizontal_alignment = 1
+
+[node name="Congratulations" parent="." unique_id=608881948 instance=ExtResource("5_4yaab")]

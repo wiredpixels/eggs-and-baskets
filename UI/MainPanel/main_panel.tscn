@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cww7qsirwrmoq"]
+
+[ext_resource type="Texture2D" uid="uid://kohqubhxkryj" path="res://UI/Images/panels.png" id="1_d287v"]
+[ext_resource type="Script" uid="uid://cpdr5016m88te" path="res://UI/MainPanel/main_panel.gd" id="1_qaf0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaf0g"]
+atlas = ExtResource("1_d287v")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq8mb"]
+atlas = ExtResource("1_d287v")
+region = Rect2(16, 16, 16, 16)
+
+[node name="MainPanel" type="PanelContainer" unique_id=409733759]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+script = ExtResource("1_qaf0g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1870152476]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1549438488]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="PanelContainerWhistle" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1425992784]
+layout_mode = 2
+
+[node name="TextureButtonWhistle" type="TextureButton" parent="MarginContainer/HBoxContainer/PanelContainerWhistle" unique_id=1224487986]
+process_mode = 3
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+tooltip_text = "Pause/Unpause"
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_qaf0g")
+stretch_mode = 4
+
+[node name="PanelContainerReload" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1239251791]
+layout_mode = 2
+
+[node name="TextureButtonReload" type="TextureButton" parent="MarginContainer/HBoxContainer/PanelContainerReload" unique_id=682122862]
+process_mode = 3
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+tooltip_text = "Reload Level"
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_kq8mb")
+stretch_mode = 4
+
+[node name="LabelBlow" type="Label" parent="." unique_id=656177236]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 24
+text = "Blow the whistle
+to start"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/PanelContainerWhistle/TextureButtonWhistle" to="." method="_on_texture_button_whistle_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/PanelContainerReload/TextureButtonReload" to="." method="_on_texture_button_reload_pressed"]

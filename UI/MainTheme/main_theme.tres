@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://d3ho2qlh4kcl6"]
+
+[ext_resource type="Texture2D" uid="uid://kohqubhxkryj" path="res://UI/Images/panels.png" id="1_4k3xj"]
+[ext_resource type="FontFile" uid="uid://cko1bbllun3cy" path="res://UI/MainTheme/Fonts/Quicksand-Bold.ttf" id="2_oowc4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oowc4"]
+texture = ExtResource("1_4k3xj")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[resource]
+default_font = ExtResource("2_oowc4")
+default_font_size = 36
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_oowc4")

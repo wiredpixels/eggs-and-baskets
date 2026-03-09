@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cluhfhcmt4vrs"]
+
+[ext_resource type="Script" uid="uid://b674xrmi11vvb" path="res://Egg/egg.gd" id="1_jfr3l"]
+[ext_resource type="Texture2D" uid="uid://bl7ripk8xltlp" path="res://World/world.png" id="2_x05es"]
+
+[node name="Egg" type="Node2D" unique_id=1990243588 groups=["egg"]]
+script = ExtResource("1_jfr3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1838102560]
+texture = ExtResource("2_x05es")
+offset = Vector2(0, -5.11)
+hframes = 16
+vframes = 16
+frame = 1

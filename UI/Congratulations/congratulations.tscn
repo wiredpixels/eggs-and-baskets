@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://uw6gvdxe8fa3"]
+
+[ext_resource type="Script" uid="uid://b0cfwg78d0v6q" path="res://UI/Congratulations/congratulations.gd" id="1_dlttd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nt526"]
+
+[node name="Congratulations" type="PanelContainer" unique_id=608881948]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nt526")
+script = ExtResource("1_dlttd")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1572181168]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=198791141]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=578519954]
+layout_mode = 2
+
+[node name="LabelCong" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=936500166]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.6117647, 0, 1)
+text = "Congratulations!!!"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=498887859]
+layout_mode = 2
+text = "Made by Wired Pixels for the
+Mini Jame Gam #52"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=91590754]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play Again "
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
